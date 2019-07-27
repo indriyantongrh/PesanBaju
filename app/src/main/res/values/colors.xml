@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorBarJualBeli">#2aa1af</color>
+    <color name="colorcardview">#e2f0f1</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorAbuabu">#686464</color>
+    <color name="colorKuninglogo">#fecd06</color>
+    <color name="colormerah">#ff4130</color>
+    <color name="colorTab2">#47c1ff</color>
+    <color name="colorPutih">#ffffff</color>
+</resources>

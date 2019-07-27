@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PesanBaju</string>
+
+
+    <string name="hint_email">Email/No. Telepon</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirmpassword">Confirm Password</string>
+    <string name="hint_namalengkap">Nama Lengkap</string>
+    <string name="hint_email1">Email Anda</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_notelpon">Nomor Telepon</string>
+    <string name="hint_tanggalbooking">Tanggal Booking</string>
+    <string name="hint_jumlahsupir">Jumlah Supir</string>
+    <string name="hint_alamatanda">Alamat Anda</string>
+    <string name="hint_jumlahbaju">Jumlah Baju</string>
+
+</resources>

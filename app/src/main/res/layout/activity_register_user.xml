@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTab2"
+    tools:context=".RegisterUser">
+
+
+    <ImageView
+        android:id="@+id/image12"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="45dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/kotak"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#BFffffff"
+        android:elevation="4dp"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/image12"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="REGISTRASI MEMBER"
+                android:textStyle="bold"
+                android:layout_below="@+id/image12"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_username"
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtnamalengkap"
+                    android:layout_width="300dp"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:hint="@string/hint_namalengkap"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="20dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtemail"
+                    android:layout_width="300dp"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_email1"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="20dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtpassword"
+                    android:layout_width="300dp"
+                    android:layout_height="43dp"
+                    android:layout_alignLeft="@+id/txtuser"
+                    android:layout_alignStart="@+id/txtuser"
+                    android:layout_below="@+id/txtuser"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_password"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="20dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnregister"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:elevation="10dp"
+        android:paddingLeft="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/kotak"
+        android:paddingRight="50dp"
+        android:text="REGISTRASI"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/btnregister"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colormerah"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:text="Silahkan Login"
+        android:textSize="13dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
