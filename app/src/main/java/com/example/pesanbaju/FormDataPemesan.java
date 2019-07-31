@@ -54,7 +54,7 @@ import static com.example.pesanbaju.BuildConfig.BASE_URL;
 
 public class FormDataPemesan extends AppCompatActivity implements View.OnClickListener {
 
-    String iduser, nama_lengkap, email, nomor_telepon, alamat, jumlah_baju, total_bayar, gambar_baju, tanggal_pesan;
+    String iduser, nama_lengkap, email, nomor_telepon, alamat, jumlah_baju, total_bayar, gambar_baju, tanggal_pesan, keterangan;
 
 
     Intent intent;
@@ -72,7 +72,7 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
     public static final String BASE_URL = "http://universedeveloper.com/gudangandroid/";
 
     TextView jumlahharga;
-    EditText txtnamalengkap, txttelepon, txtalamat, txtemail, txtjumlahbaju, txttanggalbooking;
+    EditText txtnamalengkap, txttelepon, txtalamat, txtemail, txtjumlahbaju, txttanggalbooking, txtketerangan;
     Button btncekharga, btnimage, btnpesan,btntanggal;
     ImageView image;
     Bitmap bitmap, decoded;
@@ -105,6 +105,7 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
         btnpesan = findViewById(R.id.btnpesan);
         image = findViewById(R.id.image);
         txttanggalbooking = findViewById(R.id.txttanggalbooking);
+        txtketerangan = findViewById(R.id.txtketerangan);
      ////   btntanggal = findViewById(R.id.btntanggal);
 
         nama_lengkap = getIntent().getStringExtra("nama_lengkap");
@@ -122,6 +123,7 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
         txtalamat.setText(alamat);
         txtjumlahbaju.setText(jumlah_baju);
         jumlahharga.setText(total_bayar);
+        txtketerangan.setText(keterangan);
 
         btnimage = findViewById(R.id.btnimage);
         btnimage.setOnClickListener(new View.OnClickListener() {
@@ -168,12 +170,13 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
                 String tanggal_pesan = txttanggalbooking.getText().toString();
                 String jumlah_baju = txtjumlahbaju.getText().toString();
                 String total_bayar = jumlahharga.getText().toString();
+                String keterangan = txtketerangan.getText().toString();
 
 
                 /// if (conMgr.getActiveNetworkInfo() != null
                 ///     && conMgr.getActiveNetworkInfo().isAvailable()
                 ///   && conMgr.getActiveNetworkInfo().isConnected()) {
-                checkData(nama_lengkap, email, nomor_telepon, alamat, tanggal_pesan,jumlah_baju, total_bayar, gambar_baju);
+                checkData(nama_lengkap, email, nomor_telepon, alamat, tanggal_pesan,jumlah_baju, total_bayar, keterangan,gambar_baju);
                 /// } else {
                 ///     Toast.makeText(getApplicationContext(), "Tidak ada koneksi internet", Toast.LENGTH_SHORT).show();
                 //   nn }
@@ -215,7 +218,7 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
 
 
 
-    private void checkData(final String nama_lengkap, final String email, final String nomor_telepon, final String alamat, final String tanggal_pesan, final String jumlah_baju, final String total_bayar, final String gambar_baju) {
+    private void checkData(final String nama_lengkap, final String email, final String nomor_telepon, final String alamat, final String tanggal_pesan, final String jumlah_baju, final String total_bayar, final String keterangan, final String gambar_baju) {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
         pDialog.setMessage("Upload Data ...");
@@ -247,7 +250,9 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
                         txtalamat.setText("");
                         txtjumlahbaju.setText("");
                         jumlahharga.setText("");
+                        txtketerangan.setText("");
                         image.setImageResource(0);
+
 
 
                     } else {
@@ -287,7 +292,9 @@ public class FormDataPemesan extends AppCompatActivity implements View.OnClickLi
                 params.put("tanggal_pesan", txttanggalbooking.getText().toString());
                 params.put("jumlah_baju", txtjumlahbaju.getText().toString());
                 params.put("total_bayar", jumlahharga.getText().toString());
+                params.put("keterangan", txtketerangan.getText().toString());
                 params.put("gambar_baju", getStringImage(decoded));
+                params.put("status", "Belum Lunas");
 
                 return params;
             }

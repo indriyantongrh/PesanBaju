@@ -148,12 +148,12 @@
         android:layout_below="@+id/btnregister"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@color/colormerah"
+        android:background="@color/colorPutih"
         android:paddingLeft="90dp"
         android:paddingRight="90dp"
         android:text="Silahkan Login"
         android:textSize="13dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorBlack"
         android:textStyle="bold" />
 
 

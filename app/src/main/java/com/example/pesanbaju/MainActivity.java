@@ -2,6 +2,7 @@ package com.example.pesanbaju;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -80,5 +81,40 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        /// builder.setTitle("Keluar ");
+        builder.setMessage("Apakah kamu yakin ingin keluar dari aplikasi ?");
+
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+
+
+                moveTaskToBack(true);
+                finish();
+                //// new DetailAplikasiSaya.HapusData().execute();
+                dialog.dismiss();
+            }
+
+        });
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+        //// Toast.makeText(this,"Keluar aplikasi!", Toast.LENGTH_LONG).show();
+
     }
 }

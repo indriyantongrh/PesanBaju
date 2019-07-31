@@ -9,9 +9,10 @@
     <string name="hint_email1">Email Anda</string>
     <string name="hint_username">Username</string>
     <string name="hint_notelpon">Nomor Telepon</string>
-    <string name="hint_tanggalbooking">Tanggal Booking</string>
+    <string name="hint_tanggalpesan">Tanggal Booking</string>
     <string name="hint_jumlahsupir">Jumlah Supir</string>
     <string name="hint_alamatanda">Alamat Anda</string>
     <string name="hint_jumlahbaju">Jumlah Baju</string>
+    <string name="hint_keterangan">Keterangan Size</string>
 
 </resources>
